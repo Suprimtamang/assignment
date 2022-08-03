@@ -1,39 +1,16 @@
-import 'dart:math';
+//creating a rectangular class
 
-/*creating a rectangular class
 class Rectangle {
   var length, breadth;
   Rectangle({required this.length, required this.breadth});
-}*/
-
-/*to calculate area
-class Area extends Rectangle {
-  Area({
-    required var length,
-    required var breadth,
-  }) : super(
-          breadth: 20,
-          length: 10,
-        );
-}*/
-
-/*to calculate perimeter
-class Perimeter extends Rectangle {
-  Perimeter({
-    required var length,
-    required var breadth,
-  }) : super(
-          breadth: 20,
-          length: 10,
-        );
-}*/
+// /to calculate area
+  areaOfRectangle() {
+    var area = length * breadth;
+    print("the area of rectangle is $area");
+  }
+}
 
 main() {
-  var length = 10;
-  var breadth = 20;
-  var area = length * breadth;
-
-  print("area of rectangle : $area");
-
-  return area;
+  Rectangle rectangle = Rectangle(length: 10, breadth: 20);
+  rectangle.areaOfRectangle();
 }

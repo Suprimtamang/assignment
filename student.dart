@@ -1,28 +1,33 @@
-void main() {
-  Student s1 = Student(1, Saurav, 100, 99, 100, 299);
-  s1.showData();
-}
-
 class Student {
-  var rollNum , var studName ;
+  int rollNum;
+  String studName;
   var mark1, mark2, mark3, totalMarks;
   //creating a constructor
-  Student(var rollNum, String studName, var mark1, var mark2, var mark3,
-      var totalMarks) {
-    this.rollNum = rollNum;
-    this.studName = studName;
-    this.mark1 = mark1;
-    this.mark2 = mark2;
-    this.mark3 = mark3;
-    this.totalMarks = totalMarks;
+  Student({
+    required this.rollNum,
+    required this.studName,
+    required this.mark1,
+    required this.mark2,
+    required this.mark3,
+  });
+
+// creating functions:
+  calculateTotalmarks() {
+    var totalMarks;
+    totalMarks = mark1 + mark2 + mark3;
+    print("The total marks of the $studName : $totalMarks");
   }
-  //method that does something with above information
-  void showData() {
-    print('rollNum = $rollNum');
-    print('studName = $studName');
-    print('marks = $mark1');
-    print('marks = $mark2');
-    print('marks = $mark3');
-    print('totalMarks = $totalMarks');
-  }
+}
+
+// main function
+main() {
+  // Creating Instance of class
+  Student Saurav = Student(
+    studName: "Saurav",
+    rollNum: 1,
+    mark1: 100,
+    mark2: 90.5,
+    mark3: 80,
+  );
+  Saurav.calculateTotalmarks();
 }
